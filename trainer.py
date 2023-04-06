@@ -15,7 +15,6 @@ from collections import defaultdict
 from mat_sci_torch_quats.quats import fz_reduce, scalar_last2first, scalar_first2last
 from mat_sci_torch_quats.symmetries import hcp_syms, fcc_syms  
 from collections import defaultdict
-import quat_conversion_torch
 import time
 import wandb
 from thop import profile
@@ -85,20 +84,7 @@ class Trainer():
 
             _, ch, _, _ = sr.shape
 
-            #import pdb; pdb.set_trace()
-            if ch == 3:
-                # cubochoric to quat conversion
-                sr = torch.movedim(sr, 1, -1)
-                hr = torch.movedim(hr, 1, -1)
-
-                sr = quat_conversion_torch.cubo2quat(sr)
-                hr = quat_conversion_torch.cubo2quat(hr)
-
-                sr = torch.movedim(sr, -1, 1)
-                hr = torch.movedim(hr, -1, 1)
-
-            #import pdb; pdb.set_trace()
-
+                        
             if isinstance(sr, list):
                 loss = np.sum([self.loss(sr[j],hr) for j in range(len(sr))])
             else:
@@ -161,17 +147,7 @@ class Trainer():
                 sr = self.model(lr, self.scale)
                 
                 _, ch, _, _ = sr.shape
-
-                if ch ==3:
-                    sr = torch.movedim(sr, 1, -1)
-                    hr = torch.movedim(hr, 1, -1)
-
-                    sr = quat_conversion_torch.cubo2quat(sr)
-                    hr = quat_conversion_torch.cubo2quat(hr)
-
-                    sr = torch.movedim(sr, -1, 1)
-                    hr = torch.movedim(hr, -1, 1)
-
+ 
                 org_shape = hr.shape
 
                 if isinstance(sr, list):
