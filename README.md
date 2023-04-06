@@ -82,7 +82,7 @@ Important parameters in argparser.py
 We will provide inference model on [BisQue](https://bisque2.ece.ucsb.edu/client_service/) as module. You do not need to use following steps if you are using Bisque infrastructure. 
 
       
-Download trained weights for different networks trained with different losses from [here](https://drive.google.com/drive/folders/1IPygG4-ulduOTLtYoZUlqiXVm6RwJeWC)
+Download trained weights for QRBSA network [here](https://drive.google.com/drive/folders/12ILcyCBJENrYvBxDcCwQAVNzSpofFN8q)
 
 Put it in ```./experiment/saved_weights/{name_of_file}/model/{name_of_file}.pt```
  
@@ -114,7 +114,7 @@ The model will generate superresolved EBSD map in ```npy``` format. To convert i
       
  
 ## Results
-<img src = "images/QualitativeResults.png">
+<img src = "images/qual_results.png">
 
 ## Datasets
 Material datasets will be available by request at discretion of authors. 
