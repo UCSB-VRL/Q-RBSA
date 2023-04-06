@@ -13,15 +13,15 @@ High-Resolution 3D EBSD Map Generation Using An Efficient Quaternion Transformer
 ## Installation
 Step 1: Clone repo  
 
-      git clone "https://github.com/UCSB-VRL/EBSD-Superresolution.git"
+      git clone "https://github.com/UCSB-VRL/Q-RBSA.git"
       
 Step 2: Create Virtual environment
 
-      virtualenv -p /usr/bin/python3.6 ebsdr_sr_venv(name of virtual environment)
+      virtualenv -p /usr/bin/python3.8 qrbsa_venv(name of virtual environment)
 
 Step 3: Activate Virtual environment
 
-      source ebsd_sr_venv/bin/activate
+      source qrbsa_venv/bin/activate
       
 Step 4: Download Dependencies
 

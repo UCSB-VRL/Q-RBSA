@@ -10,8 +10,7 @@ import numpy as np
 from torch.autograd import Variable
 from torch.nn import functional as F
 from tqdm import tqdm
-from collections import defaultdict
-#from plot_cdf import Misorientation_dist 
+from collections import defaultdict 
 from mat_sci_torch_quats.quats import fz_reduce, scalar_last2first, scalar_first2last
 from mat_sci_torch_quats.symmetries import hcp_syms, fcc_syms  
 from collections import defaultdict
@@ -162,10 +161,7 @@ class Trainer():
                 val_loss = self.mis_orient(sr, hr) 
                 val_loss = torch.mean(val_loss)
                 val_loss = val_loss.detach().cpu().numpy()
-                #lr = lr.detach().cpu().numpy() 
-                #hr = hr.detach().cpu().numpy()
-                #sr = sr.detach().cpu().numpy()
-
+                
                 #print("val loss:", val_loss)
                 total_val_loss += val_loss
                 count += 1

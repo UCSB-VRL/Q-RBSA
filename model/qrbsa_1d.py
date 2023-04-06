@@ -3,7 +3,6 @@ import torch.nn as nn
 import math
 
 from model.quat_utils.Qops_with_QSN import conv2d, Residual_SA
-#from model import common
 from einops import rearrange 
 
 
