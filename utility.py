@@ -195,9 +195,9 @@ class checkpoint():
         if args.load == '.':
             if args.save == '.':
                 args.save = now
-            self.dir = '/data/dkjangid/Material_Projects/superresolution/Quaternion_experiments/saved_weights/' + args.save
+            self.dir = '/data/dkjangid/Material_Projects/superresolution/Quaternion_experiments/NMI_model_weights/' + args.save
         else:
-            self.dir = '/data/dkjangid/Material_Projects/superresolution/Quaternion_experiments/saved_weights/' + args.load
+            self.dir = '/data/dkjangid/Material_Projects/superresolution/Quaternion_experiments/NMI_model_weights/' + args.load
             if not os.path.exists(self.dir):
                 args.load = '.'
             else:
