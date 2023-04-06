@@ -10,6 +10,10 @@ High-Resolution 3D EBSD Map Generation Using An Efficient Quaternion Transformer
 > **Abstract:** *Gathering 3D material microstructural information is time-consuming, expensive, and energy-intensive. Acquisition of 3D data has been accelerated by developments in serial sectioning instrument capabilities; however, for crystallographic information, the electron backscatter diffraction (EBSD) imaging modality remains rate limiting. We propose a physics-based efficient deep learning framework to reduce the time and cost of collecting 3D EBSD maps. Our framework uses a quaternion residual block self-attention network (QRBSA) to generate high-resolution 3D EBSD maps from sparsely sectioned EBSD maps. In QRBSA, quaternion-valued convolution effectively learns local relations in orientation space, while self-attention in the quaternion domain captures long-range correlations. We apply our framework to 3D data collected from commercially relevant titanium alloys, showing both qualitatively and quantitatively that our method can predict missing samples (EBSD information between sparsely sectioned mapping points) as compared to high-resolution ground truth 3D EBSD maps.*
 <hr />
 
+
+<img src = "images/3D_EBSD_framework.png">
+
+
 ## Installation
 Step 1: Clone repo  
 
@@ -79,7 +83,7 @@ Important parameters in argparser.py
 
 ## Evaluation
       
-We will provide inference model on [BisQue](https://bisque2.ece.ucsb.edu/client_service/) as module. You do not need to use following steps if you are using Bisque infrastructure. 
+We will provide inference model on [BisQue](https://bisque2.ece.ucsb.edu/client_service/) as module after publication of paper. You do not need to use following steps if you are using Bisque infrastructure. 
 
       
 Download trained weights for QRBSA network [here](https://drive.google.com/drive/folders/12ILcyCBJENrYvBxDcCwQAVNzSpofFN8q)
