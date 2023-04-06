@@ -10,7 +10,6 @@ import random
 from utility import EBSD_Ti64DIC_dataset
 from argparser import Argparser
 from trainer import Trainer
-import wandb
 from prettytable import PrettyTable
 
 args = Argparser().args

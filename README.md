@@ -17,7 +17,7 @@ Step 1: Clone repo
       
 Step 2: Create Virtual environment
 
-      virtualenv -p /usr/bin/python3.8 qrbsa_venv(name of virtual environment)
+      virtualenv -p /usr/bin/python3.10 qrbsa_venv(name of virtual environment)
 
 Step 3: Activate Virtual environment
 

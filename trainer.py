@@ -15,7 +15,6 @@ from mat_sci_torch_quats.quats import fz_reduce, scalar_last2first, scalar_first
 from mat_sci_torch_quats.symmetries import hcp_syms, fcc_syms  
 from collections import defaultdict
 import time
-import wandb
 from thop import profile
 import common
 
