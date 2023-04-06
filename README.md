@@ -73,7 +73,7 @@ Define the following parameters to train network
 Important parameters in argparser.py 
    
 * ```--syms_req```: "It tells whether you want to use symmetry or not during Loss calculation"
-* ```--patch_size```: "Size of Patch During Training"
+* ```--patch_size```: "Max Size of Patch During Training"
 * ```--act```: "Activation Function in Network"
 * ```--save_model_freq```: "How frequently do you want to save models"
 
@@ -81,7 +81,43 @@ Important parameters in argparser.py
       
 We will provide inference model on [BisQue](https://bisque2.ece.ucsb.edu/client_service/) as module. You do not need to use following steps if you are using Bisque infrastructure. 
 
+      
+Download trained weights for different networks trained with different losses from [here](https://drive.google.com/drive/folders/1IPygG4-ulduOTLtYoZUlqiXVm6RwJeWC)
 
+Put it in ```./experiment/saved_weights/{name_of_file}/model/{name_of_file}.pt```
  
+### For example 
+      
+If you use qrbsa 1D with rotational distance approximation loss:
+```
+./experiment/saved_weights/edsr_l1_ti64/model/edsr_l1_ti64.pt
+```      
 
+```--model```: qrbsa_1d
+      
+```--save```: 'qrbsa_1d_rotdist'
+      
+```--model_to_load```: 'model_best'
+      
+```--dist_type```: 'rot_dist_approx'
+      
+```--test_only```    
+Run
+```
+./test.sh
+```
+The generated results will be saved at ```experiments/saved_weights/qrbsa_1d_rotdist/results/Test_model_best``` in npy format. It will also generate images (.png) for each quaternion channel.
 
+## Visualization
+The model will generate superresolved EBSD map in ```npy``` format. To convert into IPF maps from npy files, please see [IPF Mapping](https://github.com/dkjangid910ucsb/Q-RBSA/tree/main/IPF_mapping)
+      
+      
+ 
+## Results
+<img src = "images/QualitativeResults.png">
+
+## Datasets
+Material datasets will be available by request at discretion of authors. 
+
+## Acknowledgements
+This code is built on [Q-CNN](https://github.com/Orkis-Research/Pytorch-Quaternion-Neural-Networks), [Restormer](https://github.com/swz30/Restormer), [HAN](https://github.com/wwlCape/HAN), and [EDSR](https://github.com/sanghyun-son/EDSR-PyTorch). We thank the authors for sharing their codes. 
