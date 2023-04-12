@@ -14,7 +14,7 @@ High-Resolution 3D EBSD Map Generation Using An Efficient Quaternion Transformer
 <img src = "images/3D_EBSD_framework.png">
 
 ## BisQue Inference Module
-We have provided inference model on [BisQue](https://bisque2.ece.ucsb.edu/client_service/). Users would need to create an account on BisQue to use QRBSA inference module. Below are the guidelines with images to use module on BisQue.  
+We have provided inference model on [BisQue](https://bisque2.ece.ucsb.edu/client_service/). Users would need to create an [account](https://docs.google.com/forms/d/e/1FAIpQLSfUCwOdl8Gd1KErPXbLWSPvF74ApT7M142sYQVdwluDUJXMAg/viewform) on BisQue to use QRBSA inference module. Below are the guidelines with images to use module on BisQue.  
 
 **Step 1**: Upload Input 3D EBSD File. This file has information about EBSD orientation in Quaternion domain (numpy array). A test sample is provided on BisQue with name Ti64_3D_LR.npy. 
       
