@@ -33,7 +33,7 @@ We have provided inference model on [BisQue](https://bisque2.ece.ucsb.edu/client
 
 ## The Expected Output (Hight Resolution Generated 3D EBSD File)
 
-<img src = "images/3DEBSDSR.png">
+<img src = "images/3DEBSDSR.jpeg">
 
 ## The Input (Sparsely Sectioned 3D EBSD File)
 
