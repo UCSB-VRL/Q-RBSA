@@ -1,4 +1,4 @@
-# Q-RBSA
+# Q-RBSA (Quaternion Residual Block Self Attention Network)
 High-Resolution 3D EBSD Map Generation Using An Efficient Quaternion Transformer Network
 
 [Devendra K. Jangid](https://sites.google.com/view/dkj910), [Neal R. Brodnik](https://scholar.google.com/citations?user=3dAoFJkAAAAJ&hl=en), [McLean P. Echlin](https://scholar.google.com/citations?user=fxN2OsUAAAAJ&hl=en), [Chandrakanth Gudavalli](https://scholar.google.com/citations?user=TyzK9okAAAAJ&hl=en), [Connor Levenson](https://www.linkedin.com/in/connor11son), [Tresa M. Pollock](https://materials.ucsb.edu/people/faculty/tresa-pollock), [Samantha H. Daly](https://scholar.google.com/citations?user=3whYx4UAAAAJ&hl=en), [B.S. Manjunath](https://scholar.google.com/citations?user=wRYM4qgAAAAJ&hl=en)
