@@ -1,7 +1,7 @@
 # Q-RBSA
 High-Resolution 3D EBSD Map Generation Using An Efficient Quaternion Transformer Network
 
-[Devendra K. Jangid](https://sites.google.com/view/dkj910), [Neal R. Brodnik](https://scholar.google.com/citations?user=3dAoFJkAAAAJ&hl=en), [McLean P. Echlin](https://scholar.google.com/citations?user=fxN2OsUAAAAJ&hl=en), [Tresa M. Pollock](https://materials.ucsb.edu/people/faculty/tresa-pollock), [Samantha H. Daly](https://scholar.google.com/citations?user=3whYx4UAAAAJ&hl=en), [B.S. Manjunath](https://scholar.google.com/citations?user=wRYM4qgAAAAJ&hl=en)
+[Devendra K. Jangid](https://sites.google.com/view/dkj910), [Neal R. Brodnik](https://scholar.google.com/citations?user=3dAoFJkAAAAJ&hl=en), [McLean P. Echlin](https://scholar.google.com/citations?user=fxN2OsUAAAAJ&hl=en), [Chandrakanth Gudavalli](https://scholar.google.com/citations?user=TyzK9okAAAAJ&hl=en), [Connor Levenson](https://www.linkedin.com/in/connor11son), [Tresa M. Pollock](https://materials.ucsb.edu/people/faculty/tresa-pollock), [Samantha H. Daly](https://scholar.google.com/citations?user=3whYx4UAAAAJ&hl=en), [B.S. Manjunath](https://scholar.google.com/citations?user=wRYM4qgAAAAJ&hl=en)
 
 [Paper](https://arxiv.org/abs/2303.10722)
 
@@ -16,25 +16,28 @@ High-Resolution 3D EBSD Map Generation Using An Efficient Quaternion Transformer
 ## BisQue Inference Module
 We have provided inference model on [BisQue](https://bisque2.ece.ucsb.edu/client_service/). Users would need to create an account on BisQue to use QRBSA inference module. Below are the guidelines with images to use module on BisQue.  
 
-      Step 1: Upload Input 3D EBSD File. This file has information about EBSD orientation in Quaternion domain (numpy array). 
+**Step 1**: Upload Input 3D EBSD File. This file has information about EBSD orientation in Quaternion domain (numpy array). A test sample is provided on BisQue with name Ti64_3D_LR.npy. 
       
-      Step 2: Click on Run. The module takes around 3 minutes for a file size (30 X 142 X 270) on CPU. We will work on optimization of code to reduce inference time.
+**Step 2**: Click on Run. The module takes around 3 minutes for a file size (30 X 142 X 270) on CPU. We will work on optimization of code to reduce inference time.
       
-      Step 3: QRBSA module will generate three files: 
+**Step 3**: QRBSA module will generate three files: 
       
-            Output Arr: High-Resolution 3D EBSD orientation in quaternion domain (numpy array)
+* Output Arr: High-Resolution 3D EBSD orientation in quaternion domain (numpy array)
             
-            Output File: High-Resolution 3D EBSD file in dream 3d format. Users can click on file and go to (DataContianers/ImageDataContainer/CellData/IPFColor) to visualize in 3D as shown in image
+* Output File: High-Resolution 3D EBSD file in dream 3d format. Users can click on file and go to (DataContianers/ImageDataContainer/CellData/IPFColor) to visualize in 3D as shown in image below
             
-            Input LR FIle: Low-Resolution 3D EBSD File in dream3D format. For visualization,  Users can click on file and go to (DataContianers/ImageDataContainer/CellData/IPFColor)
+* Input LR FIle: Low-Resolution 3D EBSD File in dream3D format. For visualization,  Users can click on file and go to (DataContianers/ImageDataContainer/CellData/IPFColor)
 
 ## Module Page
 <img src = "images/QRBSA_module.png">
 
-## The Expected Output
+## The Expected Output (Hight Resolution Generated 3D EBSD File)
 
 <img src = "images/3DEBSDSR.png">
 
+## The Input (Sparsely Sectioned 3D EBSD File)
+
+<img src = "images/3DEBSDLR.png">
 
 ### **Please use following steps if you want to train network**
 
