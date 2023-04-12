@@ -37,7 +37,7 @@ We have provided inference model on [BisQue](https://bisque2.ece.ucsb.edu/client
 
 ## The Input (Sparsely Sectioned 3D EBSD File)
 
-<img src = "images/3DEBSDLR.png">
+<img src = "images/3DEBSDLR.jpeg">
 
 ### **Please use following steps if you want to train network**
 
