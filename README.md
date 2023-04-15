@@ -64,7 +64,7 @@ Step 4: Download Dependencies
 
       pip install -r requirements.txt
       
-Step 5: Install gradual warmup scheduler. Go to pytorch-gradual-warmup-lr folder
+Step 5: Install gradual warmup scheduler. Go to `pytorch-gradual-warmup-lr` folder and run:
 
        python setup.py install
        
